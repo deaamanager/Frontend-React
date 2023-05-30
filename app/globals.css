@@ -1,27 +1,165 @@
+@layer utilities {
+.btnanimate{
+animation: btnanimtion 8s linear infinite;
+}
+@keyframes btnanimtion{
+  0%, 50%, 100%{
+  opacity: 1;
+  rotate: 360deg;
+   rotate:-360deg;
+  
+  }
+  25%{
+   opacity: 0.4;
+ 
+  }
+  75%{
+    opacity: 0.7;
+     rotate:360deg;
+     rotate:-360deg;
+   
+  }
+}
+.btnCard{ 
+  @apply btnanimate 
+}
+ .progcessbar{
+  animation: progcessbar 3s  forwards  ;
+}
+@keyframes progcessbar{
+  0%{
+  width: 0%;
+  }
+
+  100%{
+  width: 100%;
+  }
+}
+.imageAnimate{
+  animation: imageanimation 4s linear infinite;
+}
+@keyframes imageanimation{
+  0%, 50%, 100%{
+  opacity: 1;
+ 
+  }
+  25%{
+   opacity: 0.4;
+  
+  }
+  75%{
+    opacity: 0.7;
+    
+  }
+}
+.pointShadow{
+  box-shadow: 0 0 5px #25D366,
+               0 0 25px #25D366,
+               0 0 25px #25D366,
+               0 0 50px ;
+}
+
+.pointShadowyallow{
+  box-shadow: 0 0 5px #f7ab0a,
+               0 0 25px #f7ab0a,
+               0 0 25px #f7ab0a,
+               0 0 100px ;
+}
+.pointGreen{
+  @apply pointShadow
+}
+
+.facebook{
+  box-shadow: 0 0 5px #3b5998 ,
+               0 0 25px #3b5998 ,
+               0 0 25px #3b5998 ,
+               0 0 50px ;
+}
+
+.facebookschadow{
+  @apply facebook
+}
+
+.linkedin{
+  box-shadow: 0 0 5px #0072b1  ,
+               0 0 25px #0072b1  ,
+               0 0 25px #0072b1  ,
+               0 0 50px ;
+}
+.linkedinshadow{
+  @apply linkedin
+}
+.bgColordrop{
+  box-shadow: 0 0 5px #ADD8E6  ,
+               0 0 25px #ADD8E6  ,
+               0 0 25px #ADD8E6  ,
+               0 0 50px ;
+}
+.contactBgSchadow{
+  @apply bgColordrop
+}
+.pointyallow{
+  @apply pointShadowyallow
+}
+.shadowgray{
+@apply pointgray
+}
+.pointgray{
+  box-shadow: 0 0 5px #808080,
+               0 0 25px #808080,
+               0 0 25px #808080,
+               0 0 70px ;
+}
+
+.boxshadow{
+   box-shadow: 0 0 5px #4b9ae3,
+               0 0 25px #4b9ae3,
+               0 0 30px #4b9ae3,
+               0 0 70px ;
+  }
+
+    .link{
+   @apply text-[#25D366] uppercase tracking-[4px]
+   text-base ring-4 ring-opacity-50 ring-[#25D366] px-6
+   py-2 rounded-full backdrop-brightness-50 my-3
+ }
+  
+ .link:hover{
+    @apply text-[#111] bg-[#25D366]
+    pointGreen opacity-80
+  }
+  .boxabout{ animation: animate 1.5s    infinite ;  }
+
+ @keyframes animate{
+ 
+  0%{
+    box-shadow: 0 0 0  ;               
+  }
+  100%{
+    box-shadow: 0 0 1px #4b9ae3,
+                0 0 10px #4b9ae3,
+                0 0 35px #4b9ae3,
+                0 0 100px;
+               
+  }
+}
+
+.about-box-shadow{
+    @apply  boxabout  
+  }
+}
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-}
+
