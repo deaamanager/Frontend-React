@@ -15,96 +15,91 @@ import { motion } from "framer-motion";
 
   const sales = [
     {
-      Month: "Jan 21",
-      Sales: 2890,
+      Month: "Jan",
+      React_Redux: 95,
+      Frontend_3D: 50,
+      Nodejs: 85,
+      Database_and_APIs: 65,
     },
     {
-      Month: "Feb 21",
-      Sales: 1890,
+      Month: "Feb",
+      React_Redux: 65,
+      Frontend_3D: 85,
+      Nodejs: 95,
+      Database_and_APIs: 80,
+      },
+    {
+      Month: "Mar",
+      React_Redux: 70,
+      Frontend_3D: 90,
+      Nodejs: 75,
+      Database_and_APIs: 45,
     },
     {
-      Month: "Mar 21",
-      Sales: 2190,
+      Month: "Apr",
+      React_Redux: 55,
+      Frontend_3D: 65,
+      Nodejs: 95,
+      Database_and_APIs: 85,
     },
     {
-      Month: "Apr 21",
-      Sales: 3470,
+      Month: "May",
+      React_Redux: 85,
+      Frontend_3D: 90,
+      Nodejs: 65,
+      Database_and_APIs: 45,
     },
     {
-      Month: "May 21",
-      Sales: 2170,
+      Month: "Jun",
+      React_Redux: 65,
+      Frontend_3D: 70,
+      Nodejs: 95,
+      Database_and_APIs: 75,
     },
-    {
-      Month: "Jun 21",
-      Sales: 3170,
-    },
-    {
-      Month: "Jul 21",
-      Sales: 3490,
-    },
-    {
-      Month: "Aug 21",
-      Sales: 2680,
-    },
-    {
-      Month: "Sep 21",
-      Sales: 1290,
-    },
-    {
-      Month: "Oct 21",
-      Sales: 1010,
-    },
-    {
-      Month: "Nov 21",
-      Sales: 2350,
-    },
-    {
-      Month: "Dec 21",
-      Sales: 3350,
-    },
+   
   ];
   
   const products: { [key: string]: any } = [
     {
-      title: "Product A",
-      percentageValue: 38,
-      metric: "$ 100,838",
+      title: "Code Efficiency",
+      percentageValue: 99,
+      metric: "DevSecOps",
       location: "A",
     },
     {
-      title: "Product B",
-      percentageValue: 34,
-      metric: "$ 90,224",
+      title: "Resource Optimization",
+      percentageValue: 95,
+      metric: "APM",
       location: "A",
     },
     {
-      title: "Product C",
-      percentageValue: 28,
-      metric: "$ 74,301",
+      title: "Responsiveness",
+      percentageValue: 95,
+      metric: "Something",
       location: "A",
     },
     {
-      title: "Product Z",
-      percentageValue: 82,
-      metric: "$ 108,799",
+      title: "Page-Speed",
+      percentageValue: 99,
+      metric: "Full Visible",
       location: "B",
     },
     {
-      title: "Product E",
-      percentageValue: 10,
-      metric: "$ 13,268",
+      title: "User-Experience & Interface",
+      percentageValue: 97,
+      metric: "UX-UI",
       location: "B",
     },
     {
-      title: "Product N",
-      percentageValue: 8,
-      metric: "$ 10,614",
+      title: "search engine optimization",
+      percentageValue: 99,
+      metric: "SEO",
       location: "B",
     },
   ];
   
   const valueFormatter = (number: number) =>
-    `$ ${Intl.NumberFormat("us").format(number).toString()}`;
+    ` ${Intl.NumberFormat("us").format(number).toString()} %`;
 
 
 function Progcess() {
@@ -114,7 +109,7 @@ function Progcess() {
       
     <Flex alignItems="start" className=" pt-4 pl-4">
      
-   {/* <Metric>preformenc</Metric> */}
+   {/*<Metric>preformenc</Metric> */} 
       <BadgeDelta   
         size="xl"  deltaType="moderateIncrease"  className=" hover:scale-105   ease-out cursor-pointer w-[150px] h-39 relative  brightness-[0.7]/ pointGreen transition-all duration-150  font-bold
       py-1 bg-[linear-gradient(#ffffff99,#ffffff00,#0000004d,#ffffff33)] before:block before:contents-['']  before:absolute before:left-[8px] before:right-[8px] before:top-[5px] before:h-[10px] before:transform  before:rounded-full before:bg-[linear-gradient(#ffffffcc,#ffffff00)]   before:opacity-30">
@@ -123,11 +118,11 @@ function Progcess() {
     </Flex>
   
     <AreaChart
-      className="mt-10 h-48 "
+      className="mt-10 h-[16rem] "
       data={sales}
       index="Month"
-      categories={["Sales"]}
-      colors={["green"]}
+      categories={["React_Redux","Frontend_3D","Database_and_APIs","Nodejs"]}
+      colors={["pink","cyan","amber","green"]}
       showYAxis={false}
       showLegend={true}
       startEndOnly={true}
@@ -136,25 +131,25 @@ function Progcess() {
     />
     <TabList
     color="green"
-      className="mt-4"
+      //className="mt-4"
       defaultValue="A"
       onValueChange={(value) => setSelectedLocation(value)}
     >
-      <Tab value="A" text="Location A" />
-      <Tab value="B" text="Location B" />
+      <Tab value="A" text="Preformence" />
+      <Tab value="B" text="OptiUX" />
     </TabList>
     {products
       .filter((item: any) => item.location === selectedLocation)
       .map((item: any) => (
-        <div key={item.title} className="mt-4 space-y-2">
+        <div key={item.title} className="mt-1 space-y-2">
           <Flex>
             <Text className="text-sm">{item.title} </Text>
-            <Text color="emerald">{`${item.percentageValue}% (${item.metric})`}</Text>
+            <Text color="emerald">{`${item.percentageValue}% `} <span className="text-gray-400">{`(${item.metric})`}</span> </Text>
           </Flex>
           <div>
-          <ProgressBar percentageValue={item.percentageValue} showAnimation={true}  color="green" className="progcessbar blur-[2px]  pointGreen my-5 brightness-[1.6] 
+          <ProgressBar percentageValue={item.percentageValue} showAnimation={true}   color="green" className="progcessbar   rounded-xl  my-5 brightness-[0.8]  
           
-           transition-all duration-150 bg-[linear-gradient(#ffffff99,#ffffff00,#0000004d,#ffffff33)] before:block before:contents-['']  before:absolute before:left-[15px] before:right-[15px] before:top-0  before:transform  before:rounded-xl before:bg-[linear-gradient(#ffffffcc,#ffffff00)] before:opacity-90
+           transition-all duration-150 bg-[linear-gradient(#ffffff99,#ffffff00,#0000004d,#ffffff33)] before:block before:contents-['']  before:absolute before:left-[15px] before:right-[15px] before:top-0  before:transform  before:rounded-xl before:bg-[linear-gradient(#ffffffcc,#ffffff00)]  before:opacity-30
           "  />
           </div>
     

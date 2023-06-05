@@ -1,5 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
+import Image from "next/image";
 //import Image from "next/image";
 import Progcess from "./Progcess";
 function About() {
@@ -109,35 +110,9 @@ function About() {
           </motion.li>
         </ul>
       </div>
-
-    <Progcess />
-
-     {/*
-        
-
-      <motion.div
-        //initial={{ opacity: 0, x: 100 }}
-        //whileInView={{ opacity: 1, x: 0 }}
-        //transition={{ duration: 0.5, type: 'spring', }}
-        className='backdrop-brightness-50 about-box-shadow flex flex-col  items-center rounded-xl w-72 md:w-[50%] h-[22rem] transition space-y-5 md:mr-12 md:mt-32 py-5 px-5 z-40 '>
-        <Image
-          alt='any'
-          fill
-          className="object-cover  rounded-xl  blur-[3px] opacity-40  mix-blend-screen"
-          src="https://cdn.sanity.io/images/7n5v8za3/production/2d8c6a191cf15c5c1a95f32ef6014ae661138cc8-794x929.png"
-        />
-        <h4 className='py-2'><span className='bg-gradient-to-r from-blue-400 via-gray-400 to-blue-500  bg-clip-text  text-transparent text-[19px] md:text-2xl underline decoration-white/50  font-bold'>Here some infos About me</span>{" "}</h4>
-        <p className='text-sm md:text-lg font-bold text-gray-400 pb-4 tracking-wide'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque laboriosam dolore repellendus eaque, tenetur maxime nihil delectus iste beatae rem reprehenderit nemo perferendis consequuntur necessitatibus.
-          repellendus eaque, tenetur maxime nihil delectus iste beatae rem reprehenderit nemo perferendis consequuntur necessitatibus.
-
-        </p>
-
-
-
-      </motion.div>
-     */}
-
-
+        <div className="relative  w-full -top-7">
+        <Progcess /> 
+        </div>
     </div>
   )
 }

@@ -40,13 +40,16 @@ function Contact() {
                 <Cursor cursorColor='#4b9ae3' />
             </h1>
      
-       <div className="flex flex-row items-center">
+       <div className="flex flex-row items-center ">
 
 
-       <div className="text-white px-10 hidden md:block">
-        deaa
+       <div className="text-white  hidden md:block  ">
+        <img
+         className=" object-cover mix-blend-screen  h-[45rem]  ml-24 "
+        src="https://cdn.sanity.io/images/7n5v8za3/production/86aa4945b84fc46ce06e2d57092ff51f1c149f8a-960x1280.png" alt="" />
        </div>
        <div className=" 
+       mr-10
        relative
        w-full mx-auto mt-8 lg:m-0 filter  bg-black pointGreen  border-2 border-[#25D366] mix-blend-screen  rounded-2xl p-8">
            

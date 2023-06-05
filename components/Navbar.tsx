@@ -23,12 +23,9 @@ function Navbar() {
       
     >
       {/*  social icons*/}
-      
-      
-       
       <SocialIcon
       
-      url="https://www.linkedin.com/in/ahmed-elsayed-ali-3b0b3a1b2/"
+      url="https://www.linkedin.com/in/deaa-aldin-alawad/"
   
      fgColor="gray"
       bgColor="transparent"
@@ -36,7 +33,7 @@ function Navbar() {
     />
          <SocialIcon
      
-     url="https://www.linkedin.com/in/ahmed-elsayed-ali-3b0b3a1b2/"
+     url="https://github.com/deaamanger"
  
     fgColor="gray"
      bgColor="transparent"
@@ -44,7 +41,7 @@ function Navbar() {
    />
        <SocialIcon
      
-     url="https://www.linkedin.com/in/ahmed-elsayed-ali-3b0b3a1b2/"
+     url="https://api.whatsapp.com/send/?phone=491630299378&text&type=phone_number&app_absent=0"
  
     fgColor="gray"
      bgColor="transparent"
@@ -80,13 +77,8 @@ function Navbar() {
           {" "}
           Get in Touch{" "}
         </p>
-     
-      
-
     </motion.div>
        </Link>
-
-    
   </header>
   )
 }

@@ -43,7 +43,7 @@ useEffect(() => {
   }, []);
 
   return (
-    <div className=" bg-ble-500" >
+    <div className=" " >
       <div
         className="h-screen relative   flex  flex-col text-left md:flex-row max-w-7xl 
            justify-evenly items-center mx-auto z-0  space-y-4">
@@ -63,14 +63,13 @@ useEffect(() => {
           </motion.div>
         </motion.div>
         <motion.div
-
         >
           <div ref={ref}
 
-            className={` ${isVisible && '-skew-y-[50deg] transition-all  duration-1000 delay-300'} btnCard w-full absolute top-[22%] bg-[#25D366] left-0 h-[150px]  blur-lg mix-blend-screen  pointGreen  filter duration-150  brightness-75`} />
+            className={` ${isVisible && '-skew-y-[50deg] transition-all  duration-1000 delay-300'} btnCard w-full absolute top-[40%] bg-[#25D366] left-0 h-[150px]  blur-lg mix-blend-screen  pointGreen  filter duration-150  brightness-75`} />
           <div
             ref={ref}
-            className={` ${isVisible && '-skew-y-[-50deg] transition-all  duration-1000 delay-300'}  btnCard w-full absolute top-[22%] bg-[#25D366] left-0 h-[150px]  blur-lg mix-blend-screen  pointGreen  filter duration-150  brightness-75`} />
+            className={` ${isVisible && '-skew-y-[-50deg] transition-all  duration-1000 delay-300'}  btnCard w-full absolute top-[40%] bg-[#25D366] left-0 h-[150px]  blur-lg mix-blend-screen  pointGreen  filter duration-150  brightness-75`} />
 
         </motion.div>
       </div>

@@ -1,102 +1,114 @@
 "use client";
 
-import { motion, useAnimation,useAnimate,useInView, useScroll ,animate  } from "framer-motion";
+import { motion} from "framer-motion";
 import { Cursor, Typewriter } from "react-simple-typewriter";
 import Skill from "./Skill";
-
-import { ProgressBar } from "@tremor/react";
 import {useState , useRef, useEffect} from "react";
 import CriclePro from "./CriclePro";
 import Progressbar from "./Progressbar";
-
-
-
-
-type Props = {
-};
 function Skills() {
-
-  //const [percantge ,setPercantge] = useState(44);
-  const [percantge ,setPercantge] = useState(80);
-  const [isVisible, setIsVisible] = useState(false);
-  //const [scope, animate] = useAnimate()
+  const [percantgeI ,setPercantgeI] = useState<number>(0);
+  const [percantgeIV ,setPercantgeIV] = useState<number>(0);
+  const [percantge ,setPercantge] = useState<number>(0);
+  const [isVisible, setIsVisible] = useState<boolean>(false);
   const ref = useRef<HTMLDivElement>(null);
-
- {/*
-  useEffect(() => {
-    const handleScroll = (event:any) => {
-      const { deltaX, deltaY } = event;
-
-      const updatedAcceleration = percantge + Math.abs(deltaX) + Math.abs(deltaY);
-      setPercantge (Math.max(updatedAcceleration, 80));
-    };
-
-    window.addEventListener('scroll', handleScroll);
-
+  useEffect(() => { 
+    const observer = new IntersectionObserver(
+      (entries) => {
+      const entry = entries[0];
+      setIsVisible(entry.isIntersecting);
+    },
+    { threshold: 1 }
+    );
+    if (ref.current) {
+      observer.observe(ref.current);
+    }
     return () => {
-      window.removeEventListener('scroll', handleScroll);
+      if (ref.current) {
+        observer.unobserve(ref.current);
+      }
     };
   }, []);
-   
-   useEffect(() => {
-    if (isVisible) {
-      controls.start({ opacity: 1, scale: 1 });
-    } else {
-      controls.start({ opacity: 0, scale: 0 });
+  useEffect(() => {
+    let animationTimeout: NodeJS.Timeout | null = null;
+  
+    if (percantge < 90 && isVisible === true) {
+      if (animationTimeout) {
+        clearTimeout(animationTimeout);
+      } 
+      animationTimeout = setTimeout(() => {
+        setPercantge(prev => prev + 1);
+      }, 1);
+    } else if (percantge >= 90 && !isVisible) {
+      setPercantge(0);
     }
-  }, [controls, isVisible]);
-
-
- useEffect(() => {
-  const id = setInterval(() => {
-    setPercantge(Math.random()*100);
-  },3000);
-  return () => {
-    clearInterval(id);
-  }
-}, []);
-
- */}
+    return () => {
+      if (animationTimeout) {
+        clearTimeout(animationTimeout);
+      }
+    };
+  }, [isVisible, percantge]);
+  useEffect(() => {
+    let animationTimeout: NodeJS.Timeout | null = null;
+  
+    if (percantgeI < 95 && isVisible === true) {
+      if (animationTimeout) {
+        clearTimeout(animationTimeout);
+      } 
+      animationTimeout = setTimeout(() => {
+        setPercantgeI(prev => prev + 1);
+      }, 1);
+    } else if (percantgeI >= 95 && !isVisible) {
+      setPercantgeI(0);
+    }
+    return () => {
+      if (animationTimeout) {
+        clearTimeout(animationTimeout);
+      }
+    };
+  }, [isVisible, percantgeI]);
+  useEffect(() => {
+    let animationTimeout: NodeJS.Timeout | null = null;
+  
+    if (percantgeIV < 93 && isVisible === true) {
+      if (animationTimeout) {
+        clearTimeout(animationTimeout);
+      } 
+      animationTimeout = setTimeout(() => {
+        setPercantgeIV(prev => prev + 1);
+      }, 1);
+    } else if (percantgeIV >= 93 && !isVisible) {
+      setPercantgeIV(0);
+    }
+    return () => {
+      if (animationTimeout) {
+        clearTimeout(animationTimeout);
+      }
+    };
+  }, [isVisible, percantgeIV]);
   return (
     <div className='bg-[#111] relative h-screen w-full flex flex-col justify-center items-center text-white '>  
-      <div className="max-w-7xl mx-auto     md:space-x-10   top-24 flex absolute  left-0 right-0 items-center justify-center ">
-      <div  className="flex flex-col items-center space-y-14">
-        <div 
-              ref={ref}
-              id="percentageFunction"
-              >
-          <CriclePro  percantge={percantge}   circlewidth="200" />
-          <input
-         className="hidden" 
-         type="range" min="1" max="100" step="1" value={percantge} onChange={(ev) => setPercantge(Number(ev.target.value))} />
+      <div className="max-w-7xl mx-auto md:space-x-10 top-24 flex absolute  left-0 right-0 items-center justify-center ">
+      <div  className="flex flex-col items-center space-y-[2.5rem] ">
+        <div  ref={ref} >
+          <CriclePro  percantge={percantge}   circlewidth="200" />   
         </div>
+          <h1 className={` text-sm text-gray-400 uppercase ${isVisible && "animate-pulse"}`}>3D Web-Page</h1>      
          <Progressbar value={percantge} />
       </div>
-      <div  className="flex flex-col items-center space-y-14">
-        <div 
-              ref={ref}
-              id="percentageFunction"
-              >
-          <CriclePro  percantge={percantge}   circlewidth="200" />
-          <input
-         className="hidden"
-         
-         type="range" min="1" max="100" step="1" value={percantge} onChange={(ev) => setPercantge(Number(ev.target.value))} />
+      <div  className="flex flex-col items-center space-y-[2.5rem]">
+        <div ref={ref} >
+          <CriclePro  percantge={percantgeI}   circlewidth="200" />         
         </div>
-         <Progressbar value={percantge} />
+        <h1 className={`text-sm text-gray-400 uppercase ${isVisible && "animate-pulse"}`}>Web-Site</h1> 
+         <Progressbar value={percantgeI} />
       </div>  
-      <div  className="flex flex-col items-center space-y-14">
-        <div 
-              ref={ref}
-              id="percentageFunction"
-              >
-          <CriclePro  percantge={percantge}   circlewidth="200" />
-          <input
-         className="hidden"
-         
-         type="range" min="1" max="100" step="1" value={percantge} onChange={(ev) => setPercantge(Number(ev.target.value))} />
+      <div  className="flex flex-col items-center space-y-[2.5rem]">
+        <div ref={ref} >
+          <CriclePro  percantge={percantgeIV}   circlewidth="200" />
         </div>
-         <Progressbar value={percantge} />
+        <h1 className={`text-sm text-gray-400 uppercase ${isVisible && "animate-pulse"}`}>Web-App</h1> 
+         <Progressbar value={percantgeIV} />
       </div>
        </div>
        <h1 className=' '>
@@ -108,24 +120,13 @@ function Skills() {
       <motion.div
         initial={{ opacity: 0, scale: 0.5 }}
         whileInView={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 1.7 }}
-        className='absolute top-[60%] grid grid-cols-4 gap-4 md:gap-6'>
-        <Skill />
-        <Skill />
-        <Skill />
-        <Skill />
-        <Skill />
-        <Skill />
-        <Skill />
-        <Skill />
-        <Skill />
-        <Skill />
-        <Skill />
-        <Skill />
+        transition={{ duration: 1.7 }} 
+        className='absolute top-[60%] flex '>
+      <Skill directionleft  />
       </motion.div>
     </div>
   )
 }
 
-export default Skills
+export default Skills;
 

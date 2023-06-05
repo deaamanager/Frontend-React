@@ -50,6 +50,7 @@ function Hero() {
 
             </Plx>
 
+           {/*
             <Plx
 
                 parallaxData={[
@@ -81,7 +82,7 @@ function Hero() {
                 <img className='sm:w-full  max-w-full mx-auto mix-blend-lighten  z-40  '
                     src="https://cdn.sanity.io/images/7n5v8za3/production/6120ae94224d6f8b2798b0d5b0819f217fa0a8da-640x480.png" //"https://cdn.sanity.io/images/7n5v8za3/production/9a81221a4983d8b45269ad696e27df4467852886-3000x3000.png" alt="" />
                 />
-            </Plx>
+            </Plx> */}
 
             <Plx
                 animateWhenNotInViewport={true}
@@ -99,14 +100,21 @@ function Hero() {
                         ]
                     }
                 ]}
-                className=' z-50 fixed top-[40%] h-[30rem] md:top-[41%]  max-w-7xl mx-auto'
+                className=' z-50 fixed top-[23%]  md:top-[47%]   max-w-7xl mx-auto'
             >
                 <motion.img
                     initial={{ opacity: 0 }}
                     whileInView={{ opacity: 1 }}
                     transition={{ duration: 1.2, delay: 0.5, ease: "easeInOut", type: "spring", stiffness: 50 }}
 
-                    className=' h-full  mix-blend-screen fill-current filter' src="https://cdn.sanity.io/images/7n5v8za3/production/86aa4945b84fc46ce06e2d57092ff51f1c149f8a-960x1280.png" alt="" />
+                    className=' h-[30rem] w-full  mix-blend-screen ' 
+                    
+                    //src='https://cdn.sanity.io/images/7n5v8za3/production/de3e25e8ac538e694356452b1e552b6e96fac290-300x830.png'
+                    //src="https://cdn.sanity.io/images/7n5v8za3/production/d23bdd104667d95849525119b8a21c917b1a3347-577x433.png"
+                    src='https://cdn.sanity.io/images/7n5v8za3/production/4f439a88a675a6e25fd86ecd3042976e71eaded2-375x666.png'
+                    //src='https://cdn.sanity.io/images/7n5v8za3/production/337c5fccda3c32cdc782e3efc759ecf5a4014fde-666x375.png'
+                    //src="https://cdn.sanity.io/images/7n5v8za3/production/86aa4945b84fc46ce06e2d57092ff51f1c149f8a-960x1280.png" 
+                    alt="" />
             </Plx >
 
             <Plx
