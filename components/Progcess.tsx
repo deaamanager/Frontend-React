@@ -16,9 +16,9 @@ import { motion } from "framer-motion";
   const sales = [
     {
       Month: "Jan",
-      React_Redux: 95,
-      Frontend_3D: 50,
-      Nodejs: 85,
+      React_Redux: 65,
+      Frontend_3D: 90,
+      Nodejs: 75,
       Database_and_APIs: 65,
     },
     {
@@ -121,8 +121,8 @@ function Progcess() {
       className="mt-10 h-[16rem] "
       data={sales}
       index="Month"
-      categories={["React_Redux","Frontend_3D","Database_and_APIs","Nodejs"]}
-      colors={["pink","cyan","amber","green"]}
+      categories={["Frontend_3D","Database_and_APIs","Nodejs"]}
+      colors={["cyan","amber","green"]}
       showYAxis={false}
       showLegend={true}
       startEndOnly={true}

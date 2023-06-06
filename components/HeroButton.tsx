@@ -35,4 +35,4 @@ function HeroButton() {
     )
 }
 
-export default HeroButton
+export default HeroButton;

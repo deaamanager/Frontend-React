@@ -2,15 +2,6 @@
 import { motion } from "framer-motion";
 import Card from "./Card";
 import { useRef, useState, useEffect } from "react";
-
-const Images =[
-  "https://cdn.sanity.io/images/7n5v8za3/production/6339d9fec0beb3c603236f9f4d623dccbe440d29-1280x1280.png",
-  "https://cdn.sanity.io/images/7n5v8za3/production/6339d9fec0beb3c603236f9f4d623dccbe440d29-1280x1280.png",
-  "https://cdn.sanity.io/images/7n5v8za3/production/6339d9fec0beb3c603236f9f4d623dccbe440d29-1280x1280.png",
- 
-];
-
-
 function Projects() {
   const ref = useRef<HTMLDivElement | null>(null);
   const circRef = useRef<HTMLDivElement  >(null);
@@ -58,7 +49,7 @@ useEffect(() => {
             right:0,
             left: -isWidth
           }}
-          className="inner-carousel flex w-full h-full  items-center justify-center ">
+          className="inner-carousel  relative flex h-full w-[300%] items-center justify-center ">
          <Card />
           </motion.div>
         </motion.div>

@@ -23,14 +23,15 @@ function HeroContent() {
                         scale: 1.1,
                     }}
 
-                    className='absolute -top-[5rem] w-32 z-40'>
+                    className='absolute -top-[6rem] w-32 z-40'>
                     <Image
-                        width={250}
+                        width={650}
 
                         height={850}
                         alt="sub-image"
-                        src="https://cdn.sanity.io/images/7n5v8za3/production/6339d9fec0beb3c603236f9f4d623dccbe440d29-1280x1280.png"
-                        className=' rounded-b-full opacity-95  object-cover animate-pulse select-none '
+                        //src="https://cdn.sanity.io/images/7n5v8za3/production/6339d9fec0beb3c603236f9f4d623dccbe440d29-1280x1280.png"
+                         src="https://cdn.sanity.io/images/7n5v8za3/production/6b2dffb830ec36a6cba4b89112392e02d833f4fa-449x555.png"
+                        className='  opacity-95  object-cover  select-none '
                     />
                
                 </motion.div>
