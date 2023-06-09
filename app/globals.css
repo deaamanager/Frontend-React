@@ -20,9 +20,38 @@ animation: btnanimtion 8s linear infinite;
    
   }
 }
+
 .btnCard{ 
   @apply btnanimate 
 }
+
+.animat__effekt{
+animation: animat__effekt__1 6s  infinite;
+}
+@keyframes animat__effekt__1{
+  0%{
+  transform: translate(0px, 0px) scale(1);
+  }
+  33%{
+    transform: translate(60px,-100px) scale(1.2);
+  }
+
+  66%{
+    transform: translate(-40px,40px) scale(0.8);
+  }
+  100%{
+    transform: translate(0px,0px) scale(1);
+  }
+}
+
+
+
+.eff_1_ekt{
+  
+  @apply animat__effekt 
+}
+
+
  .progcessbar{
   animation: progcessbar 3s  forwards  ;
 }
@@ -120,7 +149,7 @@ animation: btnanimtion 8s linear infinite;
 
     .link{
    @apply text-[#25D366] uppercase tracking-[4px]
-   text-base ring-4 ring-opacity-50 ring-[#25D366] px-6
+   text-base ring-4 ring-opacity-50 ring-[#111] px-6
    py-2 rounded-full backdrop-brightness-50 my-3
  }
   

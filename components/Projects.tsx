@@ -34,7 +34,7 @@ useEffect(() => {
   }, []);
 
   return (
-    <div className=" " >
+    <div className="" >
       <div
         className="h-screen relative   flex  flex-col text-left md:flex-row max-w-7xl 
            justify-evenly items-center mx-auto z-0  space-y-4">
