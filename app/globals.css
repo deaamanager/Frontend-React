@@ -50,7 +50,25 @@ animation: animat__effekt__1 6s  infinite;
   
   @apply animat__effekt 
 }
+.top{
+  
+  @apply top__1 
+}
+.bottom{
+  
+  @apply bottom__1 
+}
+.bottom__1{
+  clip-path: polygon(0% 60%, 100% 50% ,100% 100%, 0% 100%);
+  transform: translateX(-0.08em);
+  //background: linear-gradient((177deg,black 53% ,#eee) 65%);
+  -webkit-background-clip: text;
+  //color: transparent;
+}
+.top__1 {
+  clip-path: polygon(0% 0%, 100% 0% ,100% 48%, 0% 58%);
 
+}
 
  .progcessbar{
   animation: progcessbar 3s  forwards  ;

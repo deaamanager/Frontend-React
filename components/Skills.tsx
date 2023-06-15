@@ -166,8 +166,8 @@ function Skills() {
         </div>
       </div>
       <h1 className=' '>
-        <span className=' font-blod bg-gradient-to-r from-[#25D366] via-gray-400 to-[#25D366]  bg-clip-text font-bold  text-transparent'>
-          <Typewriter loop={true} delaySpeed={2000} words={["Look at my Skills . . .","Hover on Skills . . .",]} />
+        <span className='font-blod bg-gradient-to-r from-[#25D366] via-gray-400 to-[#25D366]  bg-clip-text font-bold  text-transparent'>
+          <Typewriter  loop={true} delaySpeed={2000} words={["Look at my Skills . . .","Hover on Skills . . .",]} />
         </span>
         <Cursor />
       </h1>

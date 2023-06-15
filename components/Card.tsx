@@ -94,7 +94,10 @@ function Card() {
                  </div>
                 ))}
               </div>
-              <h1 className="pb-5 md:text-lg text-base px-3  ">{image.name} </h1>
+               <div className=" relative">
+               <h1 className="top md:text-lg text-base px-3 absolute  ">{image.name} </h1>
+               <h1 className=" bottom md:text-lg text-base px-3 text-gray-200 ">{image.name} </h1>
+               </div>
               <ul className="flex flex-col items-start justify-center px-10 md:px-16  list-disc text-[10px]  md:text-sm">
                 <li> {image.title} </li>
                 <li>{image.titleI} </li>
