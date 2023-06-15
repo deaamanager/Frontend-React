@@ -34,7 +34,7 @@ function Contact() {
 
   const privacy = {
     title: "Privacy Policy for Contact Form",
-    disc: "I am committed to protecting your privacy. This Privacy Policy outlines how we handle the personal information collected through our contact form, which utilizes Nodemailer for sending messages. Please read this policy carefully to understand how we collect, use, protect, and disclose your personal information."
+    disc: "I am committed to protecting your privacy. This Privacy Policy outlines how I handle the personal information collected through my contact form, which utilizes Nodemailer for sending messages. Please read this policy carefully to understand how I collect, use, protect, and disclose your personal information."
   }
 
 
@@ -65,7 +65,7 @@ function Contact() {
           </div>
         </>}
       </AnimatePresence>
-      <h1 className="text-center pb-5 tracking-wider text-xl font-[900]
+      <h1 className="text-center pb-10 tracking-wider text-xl font-[900]
               bg-gradient-to-r from-[#25D366] via-gray-400 to-[#25D366]  bg-clip-text  text-transparent ">
         <span >
           <Typewriter loop={true} delaySpeed={1000} words={['Contact me . . . ', "Via Whatsapp .", "Via LinkedIn .", "Or Write me Message ."]} />
