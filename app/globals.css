@@ -1,198 +1,177 @@
 @layer utilities {
-.btnanimate{
-animation: btnanimtion 8s linear infinite;
-}
-@keyframes btnanimtion{
-  0%, 50%, 100%{
-  opacity: 1;
-  rotate: 360deg;
-   rotate:-360deg;
-  
+  .btnanimate {
+    animation: btnanimtion 8s linear infinite;
   }
-  25%{
-   opacity: 0.4;
- 
-  }
-  75%{
-     opacity: 0.7;
-     rotate:360deg;
-     rotate:-360deg;
-   
-  }
-}
-
-.btnCard{ 
-  @apply btnanimate 
-}
-
-.animat__effekt{
-animation: animat__effekt__1 6s  infinite;
-}
-@keyframes animat__effekt__1{
-  0%{
-  transform: translate(0px, 0px) scale(1);
-  }
-  33%{
-    transform: translate(60px,-100px) scale(1.2);
+  @keyframes btnanimtion {
+    0%,
+    50%,
+    100% {
+      opacity: 1;
+      rotate: 360deg;
+      rotate: -360deg;
+    }
+    25% {
+      opacity: 0.4;
+    }
+    75% {
+      opacity: 0.7;
+      rotate: 360deg;
+      rotate: -360deg;
+    }
   }
 
-  66%{
-    transform: translate(-40px,40px) scale(0.8);
-  }
-  100%{
-    transform: translate(0px,0px) scale(1);
-  }
-}
-
-
-
-.eff_1_ekt{
-  
-  @apply animat__effekt 
-}
-.top{
-  
-  @apply top__1 
-}
-.bottom{
-  
-  @apply bottom__1 
-}
-.bottom__1{
-  clip-path: polygon(0% 60%, 100% 50% ,100% 100%, 0% 100%);
-  transform: translateX(-0.08em);
-  //background: linear-gradient((177deg,black 53% ,#eee) 65%);
-  -webkit-background-clip: text;
-  //color: transparent;
-}
-.top__1 {
-  clip-path: polygon(0% 0%, 100% 0% ,100% 48%, 0% 58%);
-
-}
-
- .progcessbar{
-  animation: progcessbar 3s  forwards  ;
-}
-@keyframes progcessbar{
-  0%{
-  width: 0%;
+  .btnCard {
+    @apply btnanimate;
   }
 
-  100%{
-  width: 100%;
+  .animat__effekt {
+    animation: animat__effekt__1 6s infinite;
   }
-}
-.imageAnimate{
-  animation: imageanimation 4s linear infinite;
-}
-@keyframes imageanimation{
-  0%, 50%, 100%{
-  opacity: 1;
- 
-  }
-  25%{
-   opacity: 0.4;
-  
-  }
-  75%{
-    opacity: 0.7;
-    
-  }
-}
-.pointShadow{
-  box-shadow: 0 0 5px #25D366,
-               0 0 25px #25D366,
-               0 0 25px #25D366;
+  @keyframes animat__effekt__1 {
+    0% {
+      transform: translate(0px, 0px) scale(1);
+    }
+    33% {
+      transform: translate(60px, -100px) scale(1.2);
+    }
 
-}
-
-.pointShadowyallow{
-  box-shadow: 0 0 5px #f7ab0a,
-               0 0 25px #f7ab0a,
-               0 0 25px #f7ab0a,
-               0 0 100px ;
-}
-.pointGreen{
-  @apply pointShadow
-}
-
-.facebook{
-  box-shadow: 0 0 5px #3b5998 ,
-               0 0 25px #3b5998 ,
-               0 0 25px #3b5998 ,
-               0 0 50px ;
-}
-
-.facebookschadow{
-  @apply facebook
-}
-
-.linkedin{
-  box-shadow: 0 0 5px #0072b1  ,
-               0 0 25px #0072b1  ,
-               0 0 25px #0072b1  ,
-               0 0 50px ;
-}
-.linkedinshadow{
-  @apply linkedin
-}
-.bgColordrop{
-  box-shadow: 0 0 5px #ADD8E6  ,
-               0 0 25px #ADD8E6  ,
-               0 0 25px #ADD8E6  ,
-               0 0 50px ;
-}
-.contactBgSchadow{
-  @apply bgColordrop
-}
-.pointyallow{
-  @apply pointShadowyallow
-}
-.shadowgray{
-@apply pointgray
-}
-.pointgray{
-  box-shadow: 0 0 5px #808080,
-               0 0 25px #808080,
-               0 0 25px #808080,
-               0 0 70px ;
-}
-
-.boxshadow{
-   box-shadow: 0 0 5px #4b9ae3,
-               0 0 25px #4b9ae3,
-               0 0 30px #4b9ae3,
-               0 0 70px ;
+    66% {
+      transform: translate(-40px, 40px) scale(0.8);
+    }
+    100% {
+      transform: translate(0px, 0px) scale(1);
+    }
   }
 
-    .link{
-   @apply text-[#25D366] uppercase tracking-[4px]
+  .eff_1_ekt {
+    @apply animat__effekt;
+  }
+  .top {
+    @apply top__1;
+  }
+  .bottom {
+    @apply bottom__1;
+  }
+  .bottom__1 {
+    clip-path: polygon(0% 60%, 100% 50%, 100% 100%, 0% 100%);
+    transform: translateX(-0.08em);
+    //background: linear-gradient((177deg,black 53% ,#eee) 65%);
+    -webkit-background-clip: text;
+    //color: transparent;
+  }
+  .top__1 {
+    clip-path: polygon(0% 0%, 100% 0%, 100% 48%, 0% 58%);
+  }
+
+  .progcessbar {
+    animation: progcessbar 3s forwards;
+  }
+  @keyframes progcessbar {
+    0% {
+      width: 0%;
+    }
+
+    100% {
+      width: 100%;
+    }
+  }
+  .imageAnimate {
+    animation: imageanimation 4s linear infinite;
+  }
+  @keyframes imageanimation {
+    0%,
+    50%,
+    100% {
+      opacity: 1;
+    }
+    25% {
+      opacity: 0.4;
+    }
+    75% {
+      opacity: 0.7;
+    }
+  }
+  .pointShadow {
+    box-shadow: 0 0 5px #25d366, 0 0 25px #25d366, 0 0 25px #25d366;
+  }
+
+  .pointShadowyallow {
+    box-shadow: 0 0 5px #d17cff, 0 0 25px #d17cff, 0 0 25px #d17cff, 0 0 50px;
+  }
+  .pointGreen {
+    @apply pointShadow;
+  }
+
+  .facebook {
+    box-shadow: 0 0 5px #3b5998, 0 0 25px #3b5998, 0 0 25px #3b5998, 0 0 50px;
+  }
+
+  .facebookschadow {
+    @apply facebook;
+  }
+
+  .linkedin {
+    box-shadow: 0 0 5px #0072b1, 0 0 25px #0072b1, 0 0 25px #0072b1, 0 0 50px;
+  }
+  .linkedinshadow {
+    @apply linkedin;
+  }
+  .bgColordrop {
+    box-shadow: 0 0 5px #add8e6, 0 0 25px #add8e6, 0 0 25px #add8e6, 0 0 50px;
+  }
+  .contactBgSchadow {
+    @apply bgColordrop;
+  }
+  .pointyallow {
+    @apply pointShadowyallow;
+  }
+  .shadowgray {
+    @apply pointgray;
+  }
+  .pointgray {
+    box-shadow: 0 0 5px #97f3ff, 0 0 25px #97f3ff, 0 0 18px #97f3ff;
+  }
+
+  .boxshadow {
+    box-shadow: 0 0 5px #4b9ae3, 0 0 25px #4b9ae3, 0 0 30px #4b9ae3, 0 0 70px;
+  }
+  .shadowwhite {
+    @apply shadowwhitebox;
+  }
+  .shadowwhitebox {
+    box-shadow: 0 0 5px #e5e7eb, 0 0 25px #e5e7eb, 0 0 12px #e5e7eb;
+  }
+  .shadoworange {
+    @apply shadoworangebox;
+  }
+  .shadoworangebox {
+    box-shadow: 0 0 5px #ffec98, 0 0 25px #ffec98, 0 0 18px #ffec98;
+  }
+  .link {
+    @apply text-[#25D366] uppercase tracking-[4px]
    text-base ring-4 ring-opacity-50 ring-[#111] px-6
-   py-2 rounded-full backdrop-brightness-50 my-3
- }
-  
- .link:hover{
+   py-2 rounded-full backdrop-brightness-50 my-3;
+  }
+
+  .link:hover {
     @apply text-[#111] bg-[#25D366]
-    pointGreen opacity-80
+    pointGreen opacity-80;
   }
-  .boxabout{ animation: animate 1.5s    infinite ;  }
+  .boxabout {
+    animation: animate 1.5s infinite;
+  }
 
- @keyframes animate{
- 
-  0%{
-    box-shadow: 0 0 0  ;               
+  @keyframes animate {
+    0% {
+      box-shadow: 0 0 0;
+    }
+    100% {
+      box-shadow: 0 0 1px #4b9ae3, 0 0 10px #4b9ae3, 0 0 35px #4b9ae3, 0 0 100px;
+    }
   }
-  100%{
-    box-shadow: 0 0 1px #4b9ae3,
-                0 0 10px #4b9ae3,
-                0 0 35px #4b9ae3,
-                0 0 100px;
-               
-  }
-}
 
-.about-box-shadow{
-    @apply  boxabout  
+  .about-box-shadow {
+    @apply boxabout;
   }
 }
 @tailwind base;
@@ -200,13 +179,9 @@ animation: animat__effekt__1 6s  infinite;
 @tailwind utilities;
 
 :root {
-
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-
   }
 }
-
-

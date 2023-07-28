@@ -4,16 +4,16 @@ import Card from "./Card";
 import { useRef, useState, useEffect } from "react";
 function Projects() {
   const ref = useRef<HTMLDivElement | null>(null);
-  const circRef = useRef<HTMLDivElement  >(null);
-  const [isVisible, setIsVisible] = useState<boolean >(false);
+  const circRef = useRef<HTMLDivElement>(null);
+  const [isVisible, setIsVisible] = useState<boolean>(false);
   const [isWidth, setIsWidth] = useState<Number>(0);
-useEffect(() => {
-   if(circRef.current) {
-    setIsWidth(circRef.current.scrollWidth - circRef.current.offsetWidth)
-   }
-},[])
+  useEffect(() => {
+    if (circRef.current) {
+      setIsWidth(circRef.current.scrollWidth - circRef.current.offsetWidth);
+    }
+  }, []);
 
-useEffect(() => {
+  useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
         const entry = entries[0];
@@ -34,38 +34,65 @@ useEffect(() => {
   }, []);
 
   return (
-    <div className="" >
+    <div className="">
       <div
         className="h-screen relative   flex  flex-col text-left md:flex-row max-w-7xl 
-           justify-evenly items-center mx-auto z-0  space-y-4">
-        <motion.div 
+           justify-evenly items-center mx-auto z-0  space-y-4"
+      >
+        <motion.div
           ref={circRef}
-          whileTap={{ cursor: "grabbing"}}
-        
-        className="absolute top-18   backdrop-blur backdrop-brightness-50  bg-black/50  rounded-2xl w-[20rem] h-[75%]  md:h-[80%] md:w-[50rem] mx-auto  carousel  z-30 overflow-hidden cursor-grab">
-          <motion.div 
-          drag="x"
-          dragConstraints={{
-            right:0,
-            left: -isWidth
-          }}
-          className="inner-carousel  relative flex h-full w-[300%] items-center justify-center ">
-         <Card />
+          whileTap={{ cursor: "grabbing" }}
+          className="absolute top-18   backdrop-blur backdrop-brightness-50  bg-black/50  rounded-2xl w-[20rem] h-[75%]  md:h-[80%] md:w-[50rem] mx-auto  carousel  z-30 overflow-hidden cursor-grab"
+        >
+          <motion.div
+            drag="x"
+            dragConstraints={{
+              right: 0,
+              left: -isWidth,
+            }}
+            className="inner-carousel  relative flex h-full w-[300%] items-center justify-center "
+          >
+            <Card />
           </motion.div>
         </motion.div>
-        <motion.div
-        >
-          <div ref={ref}
 
-            className={` ${isVisible && '-skew-y-[50deg] transition-all  duration-1000 delay-300'} btnCard w-full absolute top-[40%] bg-[#25D366] left-0 h-[150px]  blur-lg mix-blend-screen  pointGreen  filter duration-150  brightness-75`} />
+        <motion.div className=" w-full h-full flex overflow-hidden">
           <div
             ref={ref}
-            className={` ${isVisible && '-skew-y-[-50deg] transition-all  duration-1000 delay-300'}  btnCard w-full absolute top-[40%] bg-[#25D366] left-0 h-[150px]  blur-lg mix-blend-screen  pointGreen  filter duration-150  brightness-75`} />
-
+            className={` ${
+              isVisible &&
+              "md:-skew-y-[20deg] -skew-y-[60deg] transition-all  duration-1000 delay-300"
+            } btnCard w-[100%] absolute top-[50%] bg-[#25D366]  h-[3rem]  blur-lg mix-blend-screen  pointGreen  filter duration-150  brightness-75`}
+          />
+          <div
+            ref={ref}
+            className={` ${
+              isVisible &&
+              "md:-skew-y-[-20deg] -skew-y-[-60deg]  transition-all  duration-1000 delay-300"
+            }  btnCard w-[100%] absolute top-[50%] bg-[#25D366]  h-[3rem]  blur-lg mix-blend-screen  pointGreen  filter duration-150  brightness-75`}
+          />
         </motion.div>
       </div>
     </div>
-  )
+  );
 }
 
 export default Projects;
+{
+  /**
+           <div
+            ref={ref}
+            className={` ${
+              isVisible &&
+              "-skew-y-[50deg] transition-all  duration-1000 delay-300"
+            } btnCard w-[90%] absolute top-[40%] bg-[#25D366] left-10 h-[5rem]  blur-lg mix-blend-screen  pointGreen  filter duration-150  brightness-75`}
+          />
+          <div
+            ref={ref}
+            className={` ${
+              isVisible &&
+              "-skew-y-[-50deg] transition-all  duration-1000 delay-300"
+            }  btnCard w-[90%] absolute top-[40%] bg-[#25D366] left-10 h-[5rem]  blur-lg mix-blend-screen  pointGreen  filter duration-150  brightness-75`}
+          />
+          */
+}

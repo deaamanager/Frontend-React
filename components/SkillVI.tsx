@@ -57,9 +57,9 @@ function SkillVI() {
         alt="Skills"
         className='group-hover:pointGreen  rounded-full w-12 h-12 md:w-14 md:h-14 group-hover:border-[#25D366] object-cover filter transition duration-300 ease-in-out'
         />
-     <div className="absolute opacity-0 group-hover:opacity-80 transition duration-300 ease-in-out group-hover:bg-[#111]  md:w-14 md:h-14  w-12 h-12 bg-black rounded-full z-0 flex justify-center items-center">
+     <div className="absolute opacity-0 group-hover:opacity-80  transition duration-300 ease-in-out group-hover:bg-[#111]  md:w-14 md:h-14  w-12 h-12 bg-black rounded-full z-0 flex justify-center items-center">
     <div className="flex items-center justify-center h-full">
-      <p className="text-md font-bold text-[#25D366]  opacity-100">{skill.pross}%</p>
+      <p className="text-md font-bold text-[#25D366] opacity-100">{skill.pross}%</p>
     </div>
     </div>
         </motion.div>
