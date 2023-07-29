@@ -36,44 +36,43 @@ function Navbar() {
         />
       </motion.div>
 
-      <Link href="#Contact">
-        <motion.div
-          initial={{
-            x: 500,
-            opacity: 0,
-            scale: 0.5,
-          }}
-          animate={{
-            x: 0,
-            opacity: 1,
-            scale: 1,
-          }}
-          transition={{
-            duration: 2.5,
-          }}
-          className="flex flex-row items-center gap-x-2 justify-center /*text-gray-300*/ cursor-pointer"
-        >
+      <motion.div
+        initial={{
+          x: 500,
+          opacity: 0,
+          scale: 0.5,
+        }}
+        animate={{
+          x: 0,
+          opacity: 1,
+          scale: 1,
+        }}
+        transition={{
+          duration: 2.5,
+        }}
+        className="flex flex-row items-center gap-x-2 justify-center"
+      >
+        <a href="/home#contact">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
             viewBox="0 0 24 24"
             strokeWidth={1.5}
             stroke="currentColor"
-            className="w-5 md:w-7 h-5 md:h-7 text-gray-400 rotate-[-180deg] animate-pulse "
+            className="w-6 h-6 text-gray-400 animate-pulse"
           >
             <path
               strokeLinecap="round"
               strokeLinejoin="round"
-              d="M9 15L3 9m0 0l6-6M3 9h12a6 6 0 010 12h-3"
+              d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75"
             />
           </svg>
-
-          <p className="uppercase hidden md:inline-flex text-sm text-gray-400">
-            {" "}
-            Back{" "}
-          </p>
-        </motion.div>
-      </Link>
+        </a>
+        <p className="uppercase hidden md:inline-flex text-sm text-gray-400">
+          {" "}
+          Contact{" "}
+        </p>
+      </motion.div>
     </header>
   );
 }
