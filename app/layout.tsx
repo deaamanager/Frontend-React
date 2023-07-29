@@ -1,5 +1,7 @@
+import GoogleAnalytics from "@/components/GoogleAnalytics";
 import "./globals.css";
 import { Inter } from "next/font/google";
+import CookieBanner from "@/components/Cookiesbanner";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -19,7 +21,11 @@ export default function RootLayout({
         <meta content="width=device-width,inital-scale=1" name="viewport" />
         <link rel="icon" href="/dea.ico" />
       </head>
-      <body>{children}</body>
+      <GoogleAnalytics GA_MEASUREMENT_ID="G-FLSVT5K5VH" />
+      <body>
+        {children}
+        <CookieBanner />
+      </body>
     </html>
   );
 }

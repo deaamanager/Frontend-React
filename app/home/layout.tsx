@@ -1,4 +1,6 @@
+import GoogleAnalytics from "@/components/GoogleAnalytics";
 import "../globals.css";
+import CookieBanner from "@/components/Cookiesbanner";
 
 export const metadata = {
   title: "Deaa Aldin Alawad",
@@ -16,6 +18,7 @@ export default function RootLayout({
         <meta content="width=device-width,inital-scale=1" name="viewport" />
         <link rel="icon" href="/dea.ico" />
       </head>
+      <GoogleAnalytics GA_MEASUREMENT_ID="G-FLSVT5K5VH" />
       <body className="">{children}</body>
     </html>
   );
