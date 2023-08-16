@@ -2,9 +2,9 @@
 import { motion } from "framer-motion";
 function TimeLine() {
   return (
-    <div className=" h-16 w-[80%] my-0  py-0 mx-auto relative   -top-[15%] right-3 ">
+    <div className=" h-16 w-[80%] my-0  py-0 mx-auto relative   -top-[15%] right-3  z-0">
       <hr className="border-gray-300 border-2 absolute w-full top-[50%] -z-0   blur-[2px]" />
-      <ul className=" absolute ml-3 px-1 gap-x-10 md:gap-x-[7.2rem] lg:px-7 lg:gap-x-[9.2rem] xl:gap-x-[12rem]  md:top-[30%] top-[35%] z-50  flex items-center justify-evenly">
+      <ul className=" absolute ml-3 px-1 gap-x-10 md:gap-x-[7.2rem] lg:px-7 lg:gap-x-[9.2rem] xl:gap-x-[12rem]  md:top-[30%] top-[35%] z-0  flex items-center justify-evenly">
         <motion.li
           className="flex flex-col  items-center justify-start "
           initial={{ opacity: 0, x: -10 }}

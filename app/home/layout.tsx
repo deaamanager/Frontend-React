@@ -1,6 +1,6 @@
 import GoogleAnalytics from "@/components/GoogleAnalytics";
+
 import "../globals.css";
-import CookieBanner from "@/components/Cookiesbanner";
 
 export const metadata = {
   title: "Deaa Aldin Alawad",

@@ -2,6 +2,7 @@
   .btnanimate {
     animation: btnanimtion 8s linear infinite;
   }
+
   @keyframes btnanimtion {
     0%,
     50%,
@@ -131,15 +132,23 @@
   .pointgray {
     box-shadow: 0 0 5px #97f3ff, 0 0 25px #97f3ff, 0 0 18px #97f3ff;
   }
-
+  .boxshadows {
+    box-shadow: 0px 7px 29px 0px rgba(17, 17, 17, 0.2);
+  }
   .boxshadow {
     box-shadow: 0 0 5px #4b9ae3, 0 0 25px #4b9ae3, 0 0 30px #4b9ae3, 0 0 70px;
   }
   .shadowwhite {
     @apply shadowwhitebox;
   }
+  .boxshadow_chatbot {
+    @apply shadowblackbox;
+  }
   .shadowwhitebox {
     box-shadow: 0 0 5px #e5e7eb, 0 0 25px #e5e7eb, 0 0 12px #e5e7eb;
+  }
+  .shadowblackbox {
+    box-shadow: 0 0 5px #111, 0 0 25px #111;
   }
   .shadoworange {
     @apply shadoworangebox;
