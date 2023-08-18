@@ -7,6 +7,7 @@ import { motion } from "framer-motion";
 import useContactForm from "../hooks/useContactForm";
 import { useState } from "react";
 import sendEmail from "../lib/sendmail";
+import { useRouter } from "next/navigation";
 
 function Contact() {
   const { values, handleChange } = useContactForm();
@@ -15,7 +16,7 @@ function Contact() {
     message: "",
   });
   const [drop, setDrop] = useState(false);
-
+  const router = useRouter();
   const handleSubmit = async (e: any) => {
     e.preventDefault();
     try {
@@ -29,14 +30,14 @@ function Contact() {
       if (req.status === 250) {
         setResponseMessage({
           isSuccessful: true,
-          message:
-            "Thank you for contacting me,I will reach back to you in a short time",
+          message: "",
         });
+        router.push("/thankyou");
       }
     } catch (e) {
       setResponseMessage({
         isSuccessful: false,
-        message: "Oops,da ist was schiefgegangen.Bitte versuch's nochmal!",
+        message: "Oops, something went wrong. Please try again!",
       });
     }
   };
@@ -219,17 +220,19 @@ function Contact() {
             </div>
 
             {/*submit button */}
+
             <button
               className=" z-0 transition-all duration-150  font-bold link animate-puls 
-      py-1 bg-[linear-gradient(#ffffff99,#ffffff00,#0000004d,#ffffff33)] before:block before:contents-['']  before:absolute before:left-[8px] before:right-[8px] before:top-[5px] before:h-[10px] before:transform  before:rounded-full before:bg-[linear-gradient(#ffffffcc,#ffffff00)]   before:opacity-30"
+                    py-1 bg-[linear-gradient(#ffffff99,#ffffff00,#0000004d,#ffffff33)] before:block before:contents-['']  before:absolute before:left-[8px] before:right-[8px] before:top-[5px] before:h-[10px] before:transform  before:rounded-full before:bg-[linear-gradient(#ffffffcc,#ffffff00)]   before:opacity-30"
               value="submit"
               type="submit"
             >
               Submit
             </button>
+
             {responseMessage && (
               <span
-                className={`mx-3 pb-4 text-[11px] ${
+                className={`mx-3 pb-4 text-[9px] ${
                   responseMessage.isSuccessful
                     ? "text-green-500"
                     : "text-red-500"

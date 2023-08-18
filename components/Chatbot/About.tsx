@@ -6,11 +6,14 @@ function Contact() {
   return (
     <div className="flex  items-center justify-center pb-4">
       <h1 className="z-50 pt-1 font-[600] pl-1">
-        I'm{" "}
-        <span className="font-[900] text-amber-600 ">Deaa Aldin Alawad</span> a
-        passionate and skilled software developer dedicated to transforming your
-        business ideas into reality. With a wealth of experience and a deep
-        understanding of cutting-edge technologies, I'm your trusted partner in
+        I am {""}
+        <span className="font-[900] text-amber-600 underline ">
+          {" "}
+          Deaa Aldin Alawad
+        </span>{" "}
+        a passionate and skilled software developer dedicated to transforming
+        your business ideas into reality. With a wealth of experience and a deep
+        understanding of cutting edge technologies, I am your trusted partner in
         the world of software development.
       </h1>
       <Image

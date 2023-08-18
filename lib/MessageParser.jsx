@@ -7,13 +7,17 @@ class MessageParser {
   parse = (message) => {
     //console.log(message);
 
-    if (message.includes("contact you") || message.includes("Contact you")) {
-      this.actionProvider.contactHandler();
-    }
     //* this skript fpr plan 1 *//
     const lowercase = message.toLowerCase();
     //console.log(this.state);
-    if (lowercase.includes("deaa")) {
+    if (
+      lowercase.includes("hi") ||
+      lowercase.includes("hey") ||
+      lowercase.includes("Hey") ||
+      lowercase.includes("Hi") ||
+      lowercase.includes("Hello") ||
+      lowercase.includes("hello")
+    ) {
       //console.log("deaa ist da mit stab!");
       //this.actionProvider.helloworldHandler();
       this.actionProvider.greet();
@@ -38,7 +42,12 @@ class MessageParser {
     if (lowercase.includes("web-site")) {
       this.actionProvider.handlerwebsite();
     }
-    if (lowercase.includes("contact") || lowercase.includes("Contact")) {
+    if (
+      lowercase.includes("contact") ||
+      lowercase.includes("Contact") ||
+      lowercase.includes("contact you") ||
+      lowercase.includes("Contact you")
+    ) {
       this.actionProvider.handlercontact_section();
     }
     if (lowercase.includes("about you") || lowercase.includes("About you")) {

@@ -1,6 +1,5 @@
 "use client";
 import Image from "next/image";
-import React from "react";
 
 function LandingPage() {
   return (
@@ -19,28 +18,28 @@ function LandingPage() {
       </h1>
       <ul className="pt-2  w-full flex items-start justify-start flex-col gap-y-4 list-disc pl-2 md:pl-4">
         <li className="text-[11px] md:text-sm text-start text-amber-500/80">
-          🔗 ensure seamless integration with your existing platforms, CRM
+          {` 🔗 ensure seamless integration with your existing platforms, CRM
           systems, and analytics tools, enabling you to track performance,
-          gather insights, and refine your marketing strategies.
+          gather insights, and refine your marketing strategies.`}
         </li>
         <li className="text-[11px] md:text-sm text-start text-amber-500/80">
-          📱 Flawless Responsiveness: In today's mobile-driven world,
-          responsiveness is non-negotiable.
+          {`📱 Flawless Responsiveness: In today's mobile-driven world,
+          responsiveness is non-negotiable.`}
         </li>
         <li className="text-[11px] md:text-sm text-start text-amber-500/80">
-          🌟 Elevate your brand: Elevate your brand's online presence with a 3D
+          {` 🌟 Elevate your brand: Elevate your brand's online presence with a 3D
           responsive design that leaves a lasting impression on visitors and
-          paves the way for success.
+          paves the way for success.`}
         </li>
         <li className="text-[11px] md:text-sm text-start text-amber-500/80">
-          💡 From scroll-triggered animations to hover effects that unveil
+          {` 💡 From scroll-triggered animations to hover effects that unveil
           additional information, I provide users with a dynamic experience that
-          encourages exploration and interaction.
+          encourages exploration and interaction.`}
         </li>
         <li className="text-[11px] md:text-sm text-start text-amber-500/80">
-          🌐 With carefully sculpted 3D elements, animations, and parallax
+          {`🌐 With carefully sculpted 3D elements, animations, and parallax
           effects, we create an immersive environment that draws visitors into
-          your brand's story.
+          your brand's story.`}
         </li>
       </ul>
       <button className="mt-5 px-3 py-1  bg-amber-600/40 text-amber-500 border border-amber-500 rounded-lg ">

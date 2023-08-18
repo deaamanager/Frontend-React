@@ -17,7 +17,7 @@ function Chatbott() {
         <div
           className={`${
             bot ? "block" : "hidden"
-          } max-w-md  mx-auto z-50 rounded-2xl boxshadow_chatbot  `}
+          } max-w-md  mx-auto z-50 rounded-2xl boxshadow_chatbot   `}
         >
           <Chatbot
             config={config}
