@@ -19,6 +19,7 @@ know what specific services you're interested in or any questions you
 have!
 ///////
 
+<<<<<<< HEAD
 /////// contact chatbot section
 
            <ul className="flex flex-col w-full items-start justify-start pl-5 md:pl-10 list-disc text-sm  text-amber-500 ">
@@ -101,3 +102,5 @@ have!
               </span>
             </li>
           </ul>
+=======
+>>>>>>> fc37c43a4f60a03d9d4240ffc7dec6df031f1515
