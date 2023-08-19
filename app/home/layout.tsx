@@ -19,7 +19,7 @@ export default function RootLayout({
         <link rel="icon" href="/dea.ico" />
         <GoogleAnalytics GA_MEASUREMENT_ID="G-FLSVT5K5VH" />
       </head>
-      <body className="">{children}</body>
+      <body className="overflow-hidden">{children}</body>
     </html>
   );
 }

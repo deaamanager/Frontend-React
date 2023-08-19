@@ -1,6 +1,5 @@
 "use client";
 
-import Link from "next/link";
 import { getLocalStorage, setLocalStorage } from "@/lib/storageHelper";
 import { useState, useEffect } from "react";
 
@@ -27,7 +26,7 @@ export default function CookieBanner() {
   }, [cookieConsent]);
   return (
     <div
-      className={`my-10 z-50 mx-auto max-w-max md:max-w-screen-md
+      className={`my-10 z-50 mx-auto max-w-[25rem] md:max-w-screen-md
       ${cookieConsent != null ? "hidden" : "flex"}
                         fixed bottom-24 left-0 right-0 h-[45%]
                           flex px-3 md:px-4 py-3 justify-between items-center flex-col sm:flex-row gap-4  

@@ -1,10 +1,10 @@
 "use client";
 import { motion } from "framer-motion";
-import Link from "next/link";
+
 import { SocialIcon } from "react-social-icons";
 function Navbar() {
   return (
-    <header className="sticky top-0 p-5  flex items-start justify-between max-w-7xl mx-auto z-20 xl:items-center ">
+    <header className="sticky top-0 p-5 flex items-start justify-between max-w-7xl mx-auto z-50 xl:items-center">
       <motion.div
         initial={{
           x: -500,
@@ -19,7 +19,7 @@ function Navbar() {
         transition={{
           duration: 2.5,
         }}
-        className="flex  flex-row items-center cursor-pointer"
+        className="flex   flex-row items-center cursor-pointer"
       >
         {/*  social icons*/}
         <SocialIcon
@@ -50,16 +50,16 @@ function Navbar() {
         transition={{
           duration: 2.5,
         }}
-        className="flex flex-row items-center gap-x-2 justify-center"
+        className="flex absolute bottom-[35%] right-7 flex-row items-center gap-x-2 justify-center"
       >
         <a href="/home#contact">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
             viewBox="0 0 24 24"
-            strokeWidth={1.5}
+            strokeWidth={1}
             stroke="currentColor"
-            className="w-6 h-6 text-gray-400 animate-pulse"
+            className="w-7 h-7 text-gray-400 animate-pulse"
           >
             <path
               strokeLinecap="round"

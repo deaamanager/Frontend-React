@@ -1,20 +1,43 @@
 "use client";
 import "react-chatbot-kit/build/main.css";
 import "./chatbot.css";
-import Image from "next/image";
-import react, { useState } from "react";
+import { useState } from "react";
 import config from "../lib/configchatbot";
 import MessageParser from "../lib/MessageParser";
 import ActionProvider from "../lib/ActionProvider";
 import Chatbot from "react-chatbot-kit";
+import { motion } from "framer-motion";
 
 function Chatbott() {
   const [bot, setBot] = useState(false);
 
   return (
-    <div className="sticky  bottom-0 md:px-5 w-full rounded-2xl">
-      <div className="absolute md:right-8 right-4  flex items-center bottom-36 w-[70%] md:w-[35%] md:px-6 ">
-        <div
+    <div className="sticky bottom-10  md:bottom-4 md:px-5 w-full rounded-2xl">
+      <motion.div
+        initial={{
+          x: 500,
+          opacity: 0,
+          scale: 0.5,
+        }}
+        animate={{
+          x: 0,
+          opacity: 1,
+          scale: 1,
+        }}
+        transition={{
+          duration: 3.5,
+          delay: 2.5,
+          type: "spring",
+        }}
+        className="absolute md:right-8 right-4  flex items-center bottom-36 w-[70%] md:w-[35%] md:px-6 "
+      >
+        <motion.div
+          initial={{
+            x: 150,
+            opacity: 0,
+          }}
+          transition={{ duration: 1, delay: 0.5, type: "spring" }}
+          whileInView={{ opacity: 1, x: 0 }}
           className={`${
             bot ? "block" : "hidden"
           } max-w-md  mx-auto z-50 rounded-2xl boxshadow_chatbot   `}
@@ -24,14 +47,14 @@ function Chatbott() {
             messageParser={MessageParser}
             actionProvider={ActionProvider}
           />
-        </div>
+        </motion.div>
 
         <button
           onClick={() => setBot(!bot)}
           className={`absolute  right-4 -bottom-24 z-50 flex  items-center  justify-center  `}
         >
           {bot ? (
-            <div className="flex items-center justify-center text-amber-500 border border-amber-500 rounded-full p-2">
+            <div className="flex items-center justify-center text-amber-500 border-2 border-amber-500 rounded-full p-2">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -48,7 +71,7 @@ function Chatbott() {
               </svg>
             </div>
           ) : (
-            <div className="flex items-center justify-center text-green-500 border border-green-500 rounded-full p-2">
+            <div className="flex items-center justify-center text-green-500 border pointGreen border-green-500 rounded-full p-2">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -66,7 +89,7 @@ function Chatbott() {
             </div>
           )}
         </button>
-      </div>
+      </motion.div>
     </div>
   );
 }

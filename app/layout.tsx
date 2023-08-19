@@ -1,9 +1,7 @@
 import GoogleAnalytics from "@/components/GoogleAnalytics";
 import "./globals.css";
-import { Inter } from "next/font/google";
-import CookieBanner from "@/components/Cookiesbanner";
 
-const inter = Inter({ subsets: ["latin"] });
+import CookieBanner from "@/components/Cookiesbanner";
 
 export const metadata = {
   title: "Deaa Aldin Alawad",
