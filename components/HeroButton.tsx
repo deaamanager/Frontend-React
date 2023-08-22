@@ -10,7 +10,7 @@ function HeroButton() {
       className=" flex flex-row gap-8 items-center justify-center py-44"
     >
       <Link href="/home">
-        <div className=" relative group hover:scale-105 transition-transform duration-200 ease-out ">
+        <div className=" ga-click relative group hover:scale-105 transition-transform duration-200 ease-out ">
           <div
             className="absolute -inset-0.5   opacity-75 bg-gradient-to-r from-blue-300 to-white  rounded-xl blur-lg
                     group-hover:opacity-100 transition duration-1000 group-hover:duration-200 overflow-hidden  btnCard"
