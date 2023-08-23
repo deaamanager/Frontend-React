@@ -155,7 +155,7 @@ function Card() {
                         group-hover:opacity-100 transition duration-1000 group-hover:duration-200 overflow-hidden btnCard"
               ></div>
               <Link href={image.link}>
-                <button className=" relative divide-x divide-gray-600 px-4 py-4 bg-black rounded-xl leading-none flex items-center">
+                <button className=" ga-click relative divide-x divide-gray-600 px-4 py-4 bg-black rounded-xl leading-none flex items-center">
                   <span className="flex justify-center  items-start ">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"

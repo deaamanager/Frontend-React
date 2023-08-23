@@ -18,12 +18,22 @@ export default function RootLayout({
       <head>
         <meta content="width=device-width,inital-scale=1" name="viewport" />
         <link rel="icon" href="/dea.ico" />
-        <GoogleAnalytics GA_MEASUREMENT_ID="G-FLSVT5K5VH" />
+        <GoogleAnalytics GA_MEASUREMENT_ID="" />
       </head>
       <body>
+        <noscript>
+          <iframe
+            src="https://www.googletagmanager.com/ns.html?id=GTM-WHDNVZL4"
+            height="0"
+            width="0"
+            style={{ visibility: "hidden", display: "none" }}
+          ></iframe>
+        </noscript>
         {children}
         <CookieBanner />
       </body>
     </html>
   );
 }
+
+//  G-FLSVT5K5VH
