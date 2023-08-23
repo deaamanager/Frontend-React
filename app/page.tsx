@@ -1,3 +1,4 @@
+import Chatbott from "@/components/Chatbot";
 import Hero from "@/components/Hero";
 import LoadingPage from "@/components/LoadingPage";
 import { Suspense } from "react";

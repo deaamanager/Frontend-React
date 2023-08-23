@@ -12,7 +12,7 @@ function Chatbott() {
   const [bot, setBot] = useState(false);
 
   return (
-    <div className="sticky bottom-10  md:bottom-4 md:px-5 w-full rounded-2xl">
+    <div className="sticky bottom-10  md:bottom-4 md:px-5 w-full rounded-2xl z-40">
       <motion.div
         initial={{
           x: 500,

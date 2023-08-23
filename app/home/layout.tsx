@@ -17,7 +17,7 @@ export default function RootLayout({
       <head>
         <meta content="width=device-width,inital-scale=1" name="viewport" />
         <link rel="icon" href="/dea.ico" />
-        <GoogleAnalytics GA_MEASUREMENT_ID="" />
+        <GoogleAnalytics GA_MEASUREMENT_ID="G-FLSVT5K5VH" />
       </head>
       <body className="overflow-hidden">
         <noscript>
@@ -33,4 +33,4 @@ export default function RootLayout({
     </html>
   );
 }
-///G-FLSVT5K5VH
+///

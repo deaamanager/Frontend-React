@@ -84,7 +84,7 @@ function Contact() {
                 </ul>
               </div>
               <button
-                className=" z-50 px-4 py-1 text-[#25D366]/80 text-sm hover:border border-[#25D366] hover:pointGreen  rounded-full   bg-[linear-gradient(#ffffff99,#ffffff00,#0000004d,#ffffff33)] before:block before:contents-['']  before:absolute before:left-[8px] before:right-[8px] before:top-[5px] before:h-[10px] before:transform  before:rounded-full before:bg-[linear-gradient(#ffffffcc,#ffffff00)]   before:opacity-30"
+                className=" relative z-50 px-4 py-1 text-[#25D366]/80 text-sm hover:border border-[#25D366] hover:pointGreen  rounded-full   bg-[linear-gradient(#ffffff99,#ffffff00,#0000004d,#ffffff33)] before:block before:contents-['']  before:absolute before:left-[8px] before:right-[8px] before:top-[5px] before:h-[10px] before:transform  before:rounded-full before:bg-[linear-gradient(#ffffffcc,#ffffff00)]   before:opacity-30"
                 onClick={() => setDrop(false)}
               >
                 close
@@ -132,11 +132,10 @@ function Contact() {
             initial={{ opacity: 0, scale: 0.5 }}
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{
-              duration: 2,
-              delay: 1.2,
+              duration: 1.2,
+              delay: 0.8,
               type: "spring",
               stiffness: 100,
-              ease: "easeInOut",
             }}
             className="mb-4 flex items-center justify-evenly z-50 "
           >
