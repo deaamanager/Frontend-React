@@ -1,6 +1,7 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
+import Chatbott from "./Chatbot";
 
 function ThankyouPage() {
   return (
