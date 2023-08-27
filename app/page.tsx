@@ -1,7 +1,7 @@
 import Chatbott from "@/components/Chatbot";
 import Hero from "@/components/Hero";
 import LoadingPage from "@/components/LoadingPage";
-import { Suspense } from "react";
+import CookieBanner from "@/components/Cookiesbanner";
 
 export default function Home() {
   return (
