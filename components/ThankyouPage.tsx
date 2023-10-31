@@ -1,7 +1,6 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
-import Chatbott from "./Chatbot";
 
 function ThankyouPage() {
   return (
@@ -22,14 +21,14 @@ function ThankyouPage() {
           />
         </svg>
       </div>
-      <div className="w-[70%]  flex items-center justify-center text-gray-500 ">
+      <div className="w-[70%]  flex items-center justify-center text-gray-500/70 ">
         <div className="flex flex-col md:flex-row items-center justify-center py-5  rounded-lg pointGreen  border-2 border-[#25D366]  bg-black ">
           <Image
             width={200}
             height={200}
             src="https://cdn.sanity.io/images/7n5v8za3/production/e3ac9e14216a2ceaac523913f5f5de6f5db2cb8b-500x500.gif"
             alt="thankyou-logo"
-            className=" mix-blend-screen p-3 object-cover"
+            className="mix-blend-hard-light p-3 object-cover "
           />
 
           <h1 className="font-[700] p-3 ">
@@ -39,7 +38,7 @@ function ThankyouPage() {
         </div>
       </div>
       <Link href="/home">
-        <button className=" animate-pulse relative mt-16  px-6 py-3 text-[#25D366]/80 text-sm hover:border border-[#25D366] hover:pointGreen  rounded-full   bg-[linear-gradient(#ffffff99,#ffffff00,#0000004d,#ffffff33)] before:block before:contents-['']  before:absolute before:left-[8px] before:right-[8px] before:top-[5px] before:h-[10px] before:transform  before:rounded-full before:bg-[linear-gradient(#ffffffcc,#ffffff00)]   before:opacity-0">
+        <button className=" animate-pulse relative mt-16  px-6 py-3 text-[#25D366]/70 text-sm hover:border border-[#25D366] hover:pointGreen  rounded-full   bg-[linear-gradient(#ffffff99,#ffffff00,#0000004d,#ffffff33)] before:block before:contents-['']  before:absolute before:left-[8px] before:right-[8px] before:top-[5px] before:h-[10px] before:transform  before:rounded-full before:bg-[linear-gradient(#ffffffcc,#ffffff00)]   before:opacity-0">
           Back To Home-Page
         </button>
       </Link>

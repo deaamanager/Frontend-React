@@ -1,5 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 import { SocialIcon } from "react-social-icons";
 function Navbar() {
@@ -34,6 +35,14 @@ function Navbar() {
           bgColor="transparent"
           className=" cursor-pointer "
         />
+        <a href="/home#contact">
+          <SocialIcon
+            bgColor="transparent"
+            fgColor="gray"
+            className="cursor-pointer"
+            network="email"
+          />
+        </a>
       </motion.div>
 
       <motion.div
@@ -52,25 +61,25 @@ function Navbar() {
         }}
         className="flex absolute bottom-[35%] right-7 flex-row items-center gap-x-2 justify-center"
       >
-        <a href="/home#contact">
+        <Link href="/">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
             viewBox="0 0 24 24"
-            strokeWidth={1}
+            strokeWidth={2}
             stroke="currentColor"
-            className="w-7 h-7 text-gray-400 animate-pulse"
+            className="w-6 h-6 text-gray-400 rotate-[180deg] animate-pulse "
           >
             <path
               strokeLinecap="round"
               strokeLinejoin="round"
-              d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75"
+              d="M9 15L3 9m0 0l6-6M3 9h12a6 6 0 010 12h-3"
             />
           </svg>
-        </a>
-        <p className="uppercase hidden md:inline-flex text-sm text-gray-400">
+        </Link>
+        <p className="uppercase hidden md:inline-flex font-[500] text-gray-400">
           {" "}
-          Contact{" "}
+          Back{" "}
         </p>
       </motion.div>
     </header>

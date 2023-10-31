@@ -5,7 +5,7 @@ import Navbar from "@/components/Navbar";
 import Projects from "@/components/Projects";
 import Skills from "@/components/Skills";
 
-function page() {
+function home() {
   return (
     <div className="overflow-x-hidden relative w-full mx-auto h-screen bg-[#111] ">
       {/*Navbar */}
@@ -28,4 +28,4 @@ function page() {
   );
 }
 
-export default page;
+export default home;

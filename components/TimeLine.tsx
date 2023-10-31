@@ -113,7 +113,7 @@ function TimeLine() {
               damping: 300,
               stiffness: 500,
             }}
-            className="h-5 md:h-6 w-5 md:w-6  rounded-full bg-[#D17CFF]  blur-[3px]  pointyallow imageAnimate"
+            className="h-5 md:h-6 w-5 md:w-6  rounded-full bg-[#D97706] blur-[3px]  pointyallow imageAnimate"
           />
           <motion.div
             initial={{ opacity: 0 }}
@@ -125,7 +125,7 @@ function TimeLine() {
               damping: 300,
               stiffness: 500,
             }}
-            className=" py-0 h-8 w-[2px] blur-[2px] pointyallow  bg-[#D17CFF] "
+            className=" py-0 h-8 w-[2px] blur-[2px] pointyallow  bg-[#D97706] "
           />
 
           <svg
@@ -134,7 +134,7 @@ function TimeLine() {
             viewBox="0 0 24 24"
             strokeWidth={1.5}
             stroke="currentColor"
-            className="mt-0 p-1 h-10 w-8 md:h-12 md:w-10 object-cover rounded-2xl pointyallow bg-[#D17CFF] text-[#111]   "
+            className="mt-0 p-1 h-10 w-8 md:h-12 md:w-10 object-cover rounded-2xl pointyallow bg-[#D97706] text-[#111]   "
           >
             <path
               strokeLinecap="round"

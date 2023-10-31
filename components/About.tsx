@@ -2,6 +2,7 @@
 import { Suspense } from "react";
 import Progcess from "./Progcess";
 import TimeLine from "./TimeLine";
+import { motion } from "framer-motion";
 import LoadingPage from "./LoadingPage";
 function About() {
   return (
@@ -9,7 +10,14 @@ function About() {
       <TimeLine />
       <div className="relative  w-full -top-7">
         <Suspense fallback={<LoadingPage />}>
-          <Progcess />
+          <motion.div
+            className=""
+            initial={{ opacity: 0, scale: 0.5 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.9, delay: 0.7, type: "spring" }}
+          >
+            <Progcess />
+          </motion.div>
         </Suspense>
       </div>
     </div>

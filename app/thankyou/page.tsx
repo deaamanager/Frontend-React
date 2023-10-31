@@ -2,14 +2,14 @@
 
 import ThankyouPage from "@/components/ThankyouPage";
 
-function page() {
+function thankyou() {
   return (
     <>
-      <div className="h-screen w-full flex-col flex  items-center justify-start pt-24  gap-y-8 ">
+      <div className="h-screen bg-[#111] w-full flex-col flex  items-center justify-start pt-24  gap-y-8 ">
         <ThankyouPage />
       </div>
     </>
   );
 }
 
-export default page;
+export default thankyou;

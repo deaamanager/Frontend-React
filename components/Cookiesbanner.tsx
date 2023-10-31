@@ -1,10 +1,9 @@
 "use client";
-
 import { getLocalStorage, setLocalStorage } from "@/lib/storageHelper";
 import { useState, useEffect } from "react";
 
 export default function CookieBanner() {
-  const [cookieConsent, setCookieConsent] = useState(false);
+  const [cookieConsent, setCookieConsent] = useState(true);
 
   useEffect(() => {
     const storedCookieConsent = getLocalStorage("cookie_consent", null);
@@ -21,9 +20,9 @@ export default function CookieBanner() {
 
     setLocalStorage("cookie_consent", cookieConsent);
 
-    //For Testing
-    //console.log("Cookie Consent: ", cookieConsent);
+    console.log("Cookie Consent: ", cookieConsent);
   }, [cookieConsent]);
+
   return (
     <div
       className={`my-10 z-50 mx-auto max-w-[25rem] md:max-w-screen-md

@@ -12,17 +12,18 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+  const GTM_ID = process.env.NEXT_PUBLIC_GTM_ID;
   return (
     <html lang="en">
       <head>
         <meta content="width=device-width,inital-scale=1" name="viewport" />
         <link rel="icon" href="/dea.ico" />
-        <GoogleAnalytics GA_MEASUREMENT_ID="G-FLSVT5K5VH" />
+        <GoogleAnalytics GA_MEASUREMENT_ID={`G-FLSVT5K5VH`} />
       </head>
       <body className="overflow-hidden">
         <noscript>
           <iframe
-            src="https://www.googletagmanager.com/ns.html?id=GTM-WHDNVZL4"
+            src={`https://www.googletagmanager.com/ns.html?id=${GTM_ID}`}
             height="0"
             width="0"
             style={{ visibility: "hidden", display: "none" }}
@@ -33,4 +34,3 @@ export default function RootLayout({
     </html>
   );
 }
-///
