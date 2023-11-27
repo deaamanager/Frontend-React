@@ -16,6 +16,8 @@ function home() {
       {/*skills */}
       <Skills />
 
+      {/*  hinwise: i neeed to import true .tsx file to create new component  */}
+
       {/*projects */}
       <Projects />
 
