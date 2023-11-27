@@ -5,8 +5,6 @@ import Navbar from "@/components/Navbar";
 import Projects from "@/components/Projects";
 import Skills from "@/components/Skills";
 
-import TestSection from "@/components/TestSection";
-
 function home() {
   return (
     <div className="overflow-x-hidden relative w-full mx-auto h-screen bg-[#111] ">
@@ -17,9 +15,6 @@ function home() {
 
       {/*skills */}
       <Skills />
-
-      {/* section largeskils */}
-      <TestSection />
 
       {/*projects */}
       <Projects />
